@@ -1,0 +1,20 @@
+.section_contact {
+    width: 95%;
+    min-height: 200px;
+    background: var(--color3);
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section_contact_h2 {
+    width: 50%;
+    height: auto;
+    color: var(--color4);
+}
+
+.btn_contact {
+    width: 20%;
+}

@@ -1,0 +1,54 @@
+.footer {
+    width: 100%;
+    height: auto;
+    margin: 2.5% 0;
+}
+
+.socials_networks {
+    width: 100%;
+    height: auto;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.social_network {
+    width: auto;
+    height: auto;
+    transform: rotateZ(0deg);
+}
+
+.social_network_icon {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+
+
+@keyframes social_network {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(30deg);
+    }
+
+    75% {
+        transform: rotateZ(-30deg);
+
+    }
+
+    100% {
+        transform: rotateZ(0deg);  
+    }
+}
+
+@media(hover:hover) {
+    .social_network:hover {
+        animation: social_network .5s ease 0s 1 normal forwards;
+    }
+}

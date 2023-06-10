@@ -1,0 +1,64 @@
+:root {
+    --color1: #68fe94;
+    --color2: #060606;
+    --color3: #24272c;
+    --color4: #fefaf1;
+    --font_title: 'Merriweather', serif;
+    --font_paragraph: 'Lato', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to top, var(--color2), var(--color3));
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1,h2,h3,h4 {
+    font-family: var(--font_title);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+a,li,input,span,p {
+    font-size: 1.1rem;
+    font-family: var(--font_paragraph);
+}
+
+section {
+    margin: 10% auto auto auto;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+}

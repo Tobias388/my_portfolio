@@ -1,0 +1,175 @@
+.section_banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner_photo_profile_container {
+    width: auto;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_photo_profile {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 200px;
+    border: 2px solid var(--color1);
+}
+
+.about_me {
+    width: 50%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title, .about_me_p, .btn_wsp, .btn-cv {
+    color: var(--color4);
+    text-align: justify;
+}
+
+.title {
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.about_me_p {
+    width: 100%;
+    height: auto;
+}
+
+.btns {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn_wsp, .btn_cv {
+    width: 40%;
+    height: auto;
+    padding: 22px 0;
+    border-radius: 50px;
+    background: var(--color1);
+    color: var(--color2);
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn_p {
+    width: auto;
+    height: auto;
+    transition: ease-out all .4s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn_wsp::before {
+    content: '';
+    background-image: url(../media/icons/socials_networks/whatsapp_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: ease-out all .4s;
+}
+
+.btn_cv::before {
+    content: 'PDF';
+    object-fit: cover;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: ease-out all .4s;
+    font-weight: bold;
+}
+
+.arrow_down_container {
+    width: 62px;
+    height: 62px;
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translate(-50%, 0) rotateZ(90deg);
+    cursor: pointer;
+}
+
+.arrow_down {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes arrow_down {
+    0% {
+        transform: translate(-50%, 0) rotateZ(90deg);
+
+    }
+
+    25% {
+        transform: translate(-50%, 0) rotateZ(120deg);
+
+    }
+
+    75% {
+        transform: translate(-50%, 0) rotateZ(60deg);
+
+    }
+
+    100% {
+    transform: translate(-50%, 0) rotateZ(90deg);
+        
+    }
+}
+
+@media(hover:hover) {
+    .btn_wsp:hover::before {
+        transform: translate(-50%, -50%);
+        top: 50%;
+    }
+
+    .btn_wsp:hover .btn_p {
+        transform: translate(-50%, -200%);
+    }
+
+    .btn_cv:hover::before {
+        transform: translate(-50%, -50%);
+        top: 50%;
+    }
+
+    .btn_cv:hover .btn_p {
+        transform: translate(-50%, -200%);
+    }
+
+    .arrow_down_container:hover {
+        animation: arrow_down .5s ease 0s 1 normal forwards;
+    }
+    
+}
